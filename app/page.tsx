@@ -168,8 +168,12 @@ export default function Home() {
       {/* Header */}
       <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-8 px-4 shadow-lg">
         <div className="max-w-2xl mx-auto text-center">
-          <div className="flex items-center justify-center mb-1">
-            <img src="/BoopLogo.png" alt="Boop Org" className="h-12 w-auto" />
+          <div className="flex items-center justify-center mb-3">
+            <img
+              src="/BoopLogo.png"
+              alt="Boop Org"
+              className="h-16 w-auto bg-white rounded-xl px-4 py-2"
+            />
           </div>
           <p className="text-orange-100 text-sm">
             Digital Marketing Discovery Form
