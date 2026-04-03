@@ -341,7 +341,7 @@ export default function Home() {
             required
           >
             <RadioGroup
-              options={["Yes actively", "Occasionally", "Not yet"]}
+              options={["Yes, actively", "Occasionally", "Not yet"]}
               value={form.usesSocialMedia}
               onChange={(v) => set("usesSocialMedia", v)}
             />
