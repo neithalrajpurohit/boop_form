@@ -331,8 +331,8 @@ export default function Home() {
               <Input
                 value={form.websiteLink}
                 onChange={(v) => set("websiteLink", v)}
-                placeholder="https://yourwebsite.com"
-                type="url"
+                placeholder="e.g. www.yourwebsite.com or https://yourwebsite.com"
+                type="text"
               />
             </Field>
           )}
