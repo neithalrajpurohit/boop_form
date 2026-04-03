@@ -67,7 +67,7 @@ type FormData = {
   marketingManager: string;
   interestedServices: string[];
   monthlyBudget: string;
-  biggestChallenge: string;
+  biggestChallenge: string[];
   wantsReview: string;
 };
 
@@ -94,7 +94,7 @@ const initialForm: FormData = {
   marketingManager: "",
   interestedServices: [],
   monthlyBudget: "",
-  biggestChallenge: "",
+  biggestChallenge: [],
   wantsReview: "",
 };
 
@@ -273,12 +273,9 @@ export default function Home() {
             <CheckboxGrid
               options={BUSINESS_GOALS}
               values={form.businessGoals}
-              onChange={(v) => {
-                if (form.businessGoals.includes(v))
-                  set("businessGoals", toggleArray(form.businessGoals, v));
-                else if (form.businessGoals.length < 2)
-                  set("businessGoals", toggleArray(form.businessGoals, v));
-              }}
+              onChange={(v) =>
+                set("businessGoals", toggleArray(form.businessGoals, v))
+              }
             />
           </Field>
         </Section>
@@ -450,7 +447,7 @@ export default function Home() {
             label="What is your biggest marketing challenge today?"
             required
           >
-            <RadioGroup
+            <CheckboxGrid
               options={[
                 "Low online visibility",
                 "Not getting enough leads",
@@ -458,8 +455,10 @@ export default function Home() {
                 "Poor social media engagement",
                 "No clear marketing strategy",
               ]}
-              value={form.biggestChallenge}
-              onChange={(v) => set("biggestChallenge", v)}
+              values={form.biggestChallenge}
+              onChange={(v) =>
+                set("biggestChallenge", toggleArray(form.biggestChallenge, v))
+              }
             />
           </Field>
         </Section>
