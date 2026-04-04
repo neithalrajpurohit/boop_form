@@ -172,7 +172,7 @@ export default function Home() {
             <img
               src="/BoopLogo.png"
               alt="Boop Org"
-              className="h-24 w-48 object-contain bg-white rounded-xl px-4 py-2"
+              className="h-20 w-72 object-contain bg-white rounded-2xl px-6 py-3"
             />
           </div>
           <p className="text-orange-100 text-sm">
